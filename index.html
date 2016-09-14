@@ -18,7 +18,7 @@
     </div><!--main section-->
     <script>
       var userName = prompt('What\'s your name?');
-      alert('Welcome to my site, ' + userName);
+      alert('Welcome to my site, ' + userName + '. I\'d like to play a quick guessing game to help us get acquainted, ' + userName + '. Let\'s see how well you know me!');
 
       var questionOne = prompt ('Was I born in Pennsylvania?', 'Yes or no...');
       questionOne = questionOne.toLowerCase();
@@ -27,8 +27,22 @@
       } else if (questionOne === 'no' || questionOne === 'n') {
         alert('Even though I don\'t have the accent I actually was born near Philly.')
       } else {
-        alert('To play the game you\'ve got to follow the rules! Yes or no please.')
-      };
+        var altOne = prompt('To play the game you\'ve got to follow the rules! Yes or no please.');
+          altOne = altOne.toLowerCase();
+          if (altOne === 'yes' || altOne === 'y') {
+            alert('Correct! I was born in a suburb of Philadelphia called Lansdale.')
+          } else if (altOne === 'no' || altOne === 'n') {
+            alert('Even though I don\'t have the accent I actually was born near Philly.')
+          } else {
+            var wowOne = prompt('Are you drunk?');
+            wowOne = wowOne.toLowerCase();
+            if (wowOne === 'yes' || wowOne === 'y') {
+              alert('It\'s impolite not to share...')
+            } else {
+              alert('I\'m not sure what to say.')
+            }
+          }
+        };
       var questionTwo = prompt ('Is soccer my favorite sport?', 'Yes or no...');
       questionTwo = questionTwo.toLowerCase();
       if (questionTwo === 'yes' || questionTwo === 'y') {
