@@ -20,7 +20,7 @@
       var userName = prompt('What\'s your name?');
       alert('Welcome to my site, ' + userName);
 
-      var questionOne = prompt ('Was I born in Pennsylvania?');
+      var questionOne = prompt ('Was I born in Pennsylvania?', 'Yes or no...');
       questionOne = questionOne.toLowerCase();
       if (questionOne === 'yes' || questionOne === 'y') {
         alert('Correct! I was born in a suburb of Philadelphia called Lansdale.')
@@ -29,7 +29,7 @@
       } else {
         alert('To play the game you\'ve got to follow the rules! Yes or no please.')
       };
-      var questionTwo = prompt ('Is soccer my favorite sport?');
+      var questionTwo = prompt ('Is soccer my favorite sport?', 'Yes or no...');
       questionTwo = questionTwo.toLowerCase();
       if (questionTwo === 'yes' || questionTwo === 'y') {
         alert ('Yes! There\'s a reason why they call it the beautiful game!')
@@ -38,7 +38,7 @@
       } else {
         alert ("Sorry, no shades of gray allowed. Yes or no only.")
       };
-      var questionThree = prompt ('Do I live in Fremont?');
+      var questionThree = prompt ('Do I live in Fremont?', 'Yes or no...');
       questionThree = questionThree.toLowerCase();
       if (questionThree === 'yes' || questionThree === 'y') {
         alert ('Yep. Got a nice little one bedroom condo right there in the Center of the Universe.')
@@ -47,7 +47,7 @@
       } else {
         alert ('Still don\'t have it down by now, huh? A simple yes or no will do!')
       };
-      var questionFour = prompt ('Do I play a musical instrument?');
+      var questionFour = prompt ('Do I play a musical instrument?', 'Yes or no...');
       questionFour = questionFour.toLowerCase();
       if (questionFour === 'yes' || questionFour === 'y') {
         alert ('I learned how to play guitar in high school and still make noise with it now and again.')
