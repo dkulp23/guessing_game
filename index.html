@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Dana</title>
+  <!--I find Google fonts to be super neat. Is this encouraged/discouraged going forward?-->
     <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
+  <!--I know it's best practice to have a separate folder but assumed this would be ok for this project-->
     <style type="text/css">
       header {
         background: violet;
         padding: 10px;
       }
       img {
-        padding: 10px;
+        padding: 10px 0px 10px 50px;
         display: block;
         height: 180px;
         width: 150px;
@@ -22,7 +24,7 @@
   </head>
   <body>
     <header>
-      <h1>Welcome to me!</h1>
+      <h1 id="welcome">Welcome to me!</h1>
       <img src="http://i.imgur.com/4emEdEJ.jpg" alt="Tomatoes from my garden!" />
     </header>
     <div class="main">
@@ -107,6 +109,13 @@
       } else {
         alert ('Real slow on the uptake, eh? Please, for the love of god, just a yes or a no.')
       };
+//I used page 79 of the JS text as a reference for these scripts
+      var hello = "Welcome to me, ";
+
+      var heyThere = hello + userName + '!';
+
+      var hi = document.getElementById('welcome');
+      hi.textContent = heyThere;
 
       var answerMessageOne = 'You answered ' + questionOne + '.';
       var pa = document.getElementById('born');
@@ -123,7 +132,6 @@
       var answerMessageFour = 'You answered ' + questionFour + '.';
       var hendrix = document.getElementById('musical');
       hendrix.textContent = answerMessageFour;
-
     </script>
   </body>
 </html>
