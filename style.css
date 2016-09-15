@@ -1,0 +1,13 @@
+header {
+  background: violet;
+  padding: 10px;
+}
+img {
+  padding: 10px 0px 10px 50px;
+  display: block;
+  height: 180px;
+  width: 150px;
+}
+body {
+    font-family: 'BioRhyme', serif;
+}
