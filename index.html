@@ -3,10 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Dana</title>
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
+    <style type="text/css">
+      header {
+        background: violet;
+        padding: 10px;
+      }
+      img {
+        padding: 10px;
+        display: block;
+        height: 180px;
+        width: 150px;
+      }
+      body {
+          font-family: 'BioRhyme', serif;
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1>Welcome to me!</h1>
+      <img src="http://i.imgur.com/4emEdEJ.jpg" alt="Tomatoes from my garden!" />
     </header>
     <div class="main">
       <ul>
@@ -17,7 +34,7 @@
       </ul>
     </div><!--main section-->
     <script>
-      var userName = prompt('What\'s your name?');
+      var userName = prompt('Hi! What\'s your name?');
       alert('Welcome to my site, ' + userName + '. I\'d like to play a quick guessing game to help us get acquainted, ' + userName + '. Let\'s see how well you know me!');
 
       var questionOne = prompt ('Was I born in Pennsylvania?', 'Yes or no...');
@@ -42,7 +59,7 @@
               alert('I\'m not sure what to say.')
             }
           }
-        };
+        }; //I can't wait to learn how to do this more elegantly!
       var questionTwo = prompt ('Is soccer my favorite sport?', 'Yes or no...');
       questionTwo = questionTwo.toLowerCase();
       if (questionTwo === 'yes' || questionTwo === 'y') {
