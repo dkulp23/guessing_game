@@ -79,7 +79,15 @@
       } else if (questionTwo === 'no' || questionTwo === 'no') {
         alert ('I know, I probably fooled you when I talked about ping pong in my intro. That\'s a close runner up!')
       } else {
-        alert ("Sorry, no shades of gray allowed. Yes or no only.")
+        var altTwo = prompt ('Sorry, no shades of gray allowed. Yes or no only, please.');
+          altTwo = altTwo.toLowerCase();
+            if (altTwo === 'yes' || altTwo === 'y') {
+              alert('You got it! I still try to play twice a week in an adult leage I\'ve been a part of since I moved to Seattle!')
+            } else if (altTwo === 'no' || altTwo === 'n'){
+              alert('It get\'s a lot of criticism for being boring because so few goals are scored but every second is exciting if you know what to watch for!')
+            } else {
+              alert('Yes or no. It\'s so simple!')
+            }
       };
       var questionThree = prompt ('Do I live in Fremont?', 'Yes or no...');
       questionThree = questionThree.toLowerCase();
@@ -115,6 +123,7 @@
       var answerMessageFour = 'You answered ' + questionFour + '.';
       var hendrix = document.getElementById('musical');
       hendrix.textContent = answerMessageFour;
+
     </script>
   </body>
 </html>
