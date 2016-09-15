@@ -28,9 +28,21 @@
     <div class="main">
       <ul>
         <li>Was I born in Pennsylvania?</li>
+          <ul>
+            <li id='born'>I sure was!</li>
+          </ul>
         <li>Is soccer my favorite sport?</li>
+          <ul>
+            <li id='sport'>Soccer is neat!</li>
+          </ul>
         <li>Do I live in Fremont?</li>
+          <ul>
+            <li id='live'>Steps from that Lennin statue.</li>
+          </ul>
         <li>Do I play a musical instrument?</li>
+          <ul>
+            <li id='musical'>Just chords but it counts!</li>
+          </ul>
       </ul>
     </div><!--main section-->
     <script>
@@ -87,6 +99,22 @@
       } else {
         alert ('Real slow on the uptake, eh? Please, for the love of god, just a yes or a no.')
       };
+
+      var answerMessageOne = 'You answered ' + questionOne + '.';
+      var pa = document.getElementById('born');
+      pa.textContent = answerMessageOne;
+
+      var answerMessageTwo = 'You answered ' + questionTwo + '.';
+      var gol = document.getElementById('sport');
+      gol.textContent = answerMessageTwo;
+
+      var answerMessageThree = 'You answered ' + questionThree + '.';
+      var troll = document.getElementById('live');
+      troll.textContent = answerMessageThree;
+
+      var answerMessageFour = 'You answered ' + questionFour + '.';
+      var hendrix = document.getElementById('musical');
+      hendrix.textContent = answerMessageFour;
     </script>
   </body>
 </html>
