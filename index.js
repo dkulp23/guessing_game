@@ -71,14 +71,20 @@ if (birthMonthInt === 12 && birthYear === '1980') {
 } else if (birthMonthInt === 12 && birthYear !== '1980') {
   if (birthYearInt >= 1978 && birthYearInt <= 1982) {
     alert ('So close! You got December right but I was born in 1980');
-  } else if (birthYearInt < 1978){
+  } else if (birthYearInt < 1978) {
     alert ('You got the month right but how old do you think I am??');
   } else {
     alert('I\'ll take that as a compliment! You got Decmeber right but I was born in 1980.');
   }
 } else if (birthMonthInt !== 12 && birthYear === '1980') {
-  alert ('Almost! I was born in 1980 but in the month of December. Yep, I\'m a Sag.');
-};
+  if (birthMonthInt <= 2 || birthMonthInt >= 10) {
+    alert ('Close! You got the year right but I was born in December. Yeah Sagitarius!');
+  } else {
+    alert ('Almost! You got the year right but how long do you think the winter is? I was born in December.');
+  }
+} else {
+  alert ('Thanks for trying but you didn\'t get either right. Just so you know, I was born in December of 1980.');
+}
 
 //I used page 79 of the JS text as a reference for these scripts
 var hello = 'Welcome to me, ';
