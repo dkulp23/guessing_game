@@ -62,8 +62,23 @@ if (questionFour === 'yes' || questionFour === 'y') {
 alert('Bonus round: Can you guess my birth month and year?? Answer in two parts: First enter the month, and then the year.');
 var birthMonth = prompt ('In which month was I born? (Hint: Winter month)', 'mm | January = 01');
 console.log(birthMonth);
+var birthMonthInt = parseInt(birthMonth);
 var birthYear = prompt ('In which year was I born? (Hint: Even number)', 'yyyy');
 console.log(birthYear);
+var birthYearInt = parseInt(birthYear);
+if (birthMonthInt === 12 && birthYear === '1980') {
+  alert ('You win the grand prize! Did you see my driver\'s license or something?');
+} else if (birthMonthInt === 12 && birthYear !== '1980') {
+  if (birthYearInt >= 1978 && birthYearInt <= 1982) {
+    alert ('So close! You got December right but I was born in 1980');
+  } else if (birthYearInt < 1978){
+    alert ('You got the month right but how old do you think I am??');
+  } else {
+    alert('I\'ll take that as a compliment! You got Decmeber right but I was born in 1980.');
+  }
+} else if (birthMonthInt !== 12 && birthYear === '1980') {
+  alert ('Almost! I was born in 1980 but in the month of December. Yep, I\'m a Sag.');
+};
 
 //I used page 79 of the JS text as a reference for these scripts
 var hello = 'Welcome to me, ';
