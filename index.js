@@ -90,6 +90,9 @@ if (birthMonthInt === 12 && birthYear === '1980') {
   alert ('Thanks for trying but you didn\'t get either right. Just so you know, I was born in December of 1980.');
 }
 
+var places = ['iceland', 'mexico', 'canada', 'st martin'];
+var travel = prompt ('Last question: I\'ve only traveled out of the US to 4 other countries. Can you name one?', 'Hint: 1 Nordic, 2 are neighbors & 1 Caribbean Island');
+
 //I used page 79 of the JS text as a reference for these scripts
 var hello = 'Welcome to me, ';
 
