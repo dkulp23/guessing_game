@@ -88,10 +88,23 @@ if (birthMonthInt === 12 && birthYear === '1980') {
   }
 } else {
   alert ('Thanks for trying but you didn\'t get either right. Just so you know, I was born in December of 1980.');
-}
+};
 
 var places = ['iceland', 'mexico', 'canada', 'st martin'];
-var travel = prompt ('Last question: I\'ve only traveled out of the US to 4 other countries. Can you name one?', 'Hint: 1 Nordic, 2 are neighbors & 1 Caribbean Island');
+var travel = prompt ('Last question: I\'ve only traveled out of the US to 4 other countries. Can you name one?', '1 is Nordic, 2 are neighbors & 1 a Caribbean Island');
+var travelUse = travel.toLowerCase();
+console.log(travelUse);
+if (places.indexOf(travelUse) > -1) {
+  alert ('Yes! Great guess!');
+// } else if (travelUse === places.indexOf(1)) {
+//   alert ('Si! Cancun with family. Spring break!');
+// } else if (travelUse === places.indexOf(2)) {
+//   alert ('You betcha, eh! I actually went to the Women\'s World Cup final in Vancouver last year!');
+// } else if (travelUse === places.indexOf(3)) {
+//   alert ('Oh yes! It was beautiful. Paradise on earth!');
+} else {
+  alert ('Sorry. You didn\'t guess correctly. Thanks for playing though!');
+};
 
 //I used page 79 of the JS text as a reference for these scripts
 var hello = 'Welcome to me, ';
