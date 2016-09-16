@@ -1,13 +1,21 @@
+body {
+    font-family: 'BioRhyme', serif;
+}
 header {
   background: violet;
   padding: 10px;
+}
+#welcome {
+  text-align: center;
+  color: #3300FF;
 }
 img {
   padding: 10px 0px 10px 50px;
   display: block;
   height: 180px;
   width: 150px;
+  margin: 0 auto;
 }
-body {
-    font-family: 'BioRhyme', serif;
+.email {
+  text-align: center;
 }
