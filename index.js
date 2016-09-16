@@ -24,6 +24,7 @@ if (questionOne === 'yes' || questionOne === 'y') {
     }
   }
 }; //I can't wait to learn how to do this more elegantly!
+
 var questionTwo = prompt ('Is soccer my favorite sport?', 'Yes or no...');
 questionTwo = questionTwo.toLowerCase();
 if (questionTwo === 'yes' || questionTwo === 'y') {
@@ -41,6 +42,7 @@ if (questionTwo === 'yes' || questionTwo === 'y') {
     alert('Yes or no. It\'s so simple!');
   }
 };
+
 var questionThree = prompt ('Do I live in Fremont?', 'Yes or no...');
 questionThree = questionThree.toLowerCase();
 if (questionThree === 'yes' || questionThree === 'y') {
@@ -50,6 +52,7 @@ if (questionThree === 'yes' || questionThree === 'y') {
 } else {
   alert ('Still don\'t have it down by now, huh? A simple yes or no will do!');
 };
+
 var questionFour = prompt ('Do I play a musical instrument?', 'Yes or no...');
 questionFour = questionFour.toLowerCase();
 if (questionFour === 'yes' || questionFour === 'y') {
@@ -59,6 +62,7 @@ if (questionFour === 'yes' || questionFour === 'y') {
 } else {
   alert ('Real slow on the uptake, eh? Please, for the love of god, just a yes or a no.');
 };
+
 alert('Bonus round: Can you guess my birth month and year?? Answer in two parts: First enter the month, and then the year.');
 var birthMonth = prompt ('In which month was I born? (Hint: Winter month)', 'mm | January = 01');
 console.log(birthMonth);
@@ -109,3 +113,7 @@ troll.textContent = answerMessageThree;
 var answerMessageFour = 'You answered ' + questionFour + '.';
 var hendrix = document.getElementById('musical');
 hendrix.textContent = answerMessageFour;
+
+var birthDay = 'You thought I was born in the ' + birthMonth + ' month of ' + birthYear + '.';
+var december = document.getElementById('sag');
+december.textContent = birthDay;
