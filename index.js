@@ -59,6 +59,12 @@ if (questionFour === 'yes' || questionFour === 'y') {
 } else {
   alert ('Real slow on the uptake, eh? Please, for the love of god, just a yes or a no.');
 };
+alert('Bonus round: Can you guess my birth month and year?? Answer in two parts: First enter the month, and then the year.');
+var birthMonth = prompt ('In which month was I born? (Hint: Winter month)', 'mm | January = 01');
+console.log(birthMonth);
+var birthYear = prompt ('In which year was I born? (Hint: Even number)', 'yyyy');
+console.log(birthYear);
+
 //I used page 79 of the JS text as a reference for these scripts
 var hello = 'Welcome to me, ';
 
