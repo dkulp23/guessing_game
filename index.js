@@ -106,6 +106,30 @@ if (places.indexOf(travelUse) > -1) {
   alert ('Sorry. You didn\'t guess correctly. Thanks for playing though!');
 };
 
+var myNumber = 4;
+var counter = 1;
+
+function getUserNumber() {
+  var userAnswerSeven = parseInt(prompt('I\'m thinking of a number beween 1 and 10. Can you guess it?'));
+  if (userAnswerSeven === myNumber) {
+    if (counter === 1) {
+      alert ('Wow! You got it on the first try. You must be a mind reader!');
+      return;
+    } else {
+      alert ('Nice work. You got it on try number ' + counter + '.');
+    }
+  } else if (userAnswerSeven < myNumber) {
+    alert ('Sorry. ' + userAnswerSeven + ' is too low.');
+    counter++;
+    getUserNumber();
+  } else {
+    alert ('Nice try. ' + userAnswerSeven + ' is too high.');
+    counter++;
+    getUserNumber();
+  }
+}
+getUserNumber();
+
 //I used page 79 of the JS text as a reference for these scripts
 var hello = 'Welcome to me, ';
 
@@ -135,5 +159,9 @@ var december = document.getElementById('sag');
 december.textContent = birthDay;
 
 var countries = 'You thought that I have travelled to ' + travel + '.';
-var trips = document.getElementById('countries');
+var trips = document.getElementById('abroad');
 trips.textContent = countries;
+
+var numberGuess = 'It took you ' + counter + ' guesses to get my number, which was ' + myNumber + '.';
+var houdini = document.getElementById('fourIsMyNumber');
+houdini.textContent = numberGuess;
