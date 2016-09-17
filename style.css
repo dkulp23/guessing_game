@@ -2,19 +2,23 @@ body {
     font-family: 'BioRhyme', serif;
 }
 header {
-  background: violet;
+  background: #01505F;
   padding: 10px;
 }
 #welcome {
   text-align: center;
-  color: #3300FF;
+  color: #6A959D;
 }
 img {
-  padding: 10px 0px 10px 50px;
+  padding: 10px;
   display: block;
-  height: 180px;
-  width: 150px;
+  height: 320px;
+  width: 240px;
   margin: 0 auto;
+}
+.main {
+  background-color: #9B4A00;
+  color: #FFD4AA;
 }
 .email {
   text-align: center;
