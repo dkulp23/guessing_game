@@ -106,6 +106,9 @@ if (places.indexOf(travelUse) > -1) {
   alert ('Sorry. You didn\'t guess correctly. Thanks for playing though!');
 };
 
+var myNumber = 4;
+var userAnswerSeven = parseInt(prompt('I\'m thinking of a number beween 1 and 10. Can you guess it?'));
+
 //I used page 79 of the JS text as a reference for these scripts
 var hello = 'Welcome to me, ';
 
