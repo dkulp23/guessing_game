@@ -16,9 +16,17 @@ img {
   width: 240px;
   margin: 0 auto;
 }
+figcaption {
+  color: #437983;
+  font-size: 0.75em;
+  text-align: center;
+}
 .main {
   background-color: #9B4A00;
   color: #FFD4AA;
+}
+footer {
+  background-color: #505F90;
 }
 .email {
   text-align: center;
