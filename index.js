@@ -1,8 +1,10 @@
 var userName = prompt('Hi! What\'s your name?');
+console.log(userName);
 alert('Welcome to my site, ' + userName + '. I\'d like to play a quick guessing game to help us get acquainted, ' + userName + '. Let\'s see how well you know me!');
 
 var questionOne = prompt ('Was I born in Pennsylvania?', 'Yes or no...');
 questionOne = questionOne.toLowerCase();
+console.log(questionOne);
 if (questionOne === 'yes' || questionOne === 'y') {
   alert('Correct! I was born in a suburb of Philadelphia called Lansdale.');
 } else if (questionOne === 'no' || questionOne === 'n') {
@@ -27,6 +29,7 @@ if (questionOne === 'yes' || questionOne === 'y') {
 
 var questionTwo = prompt ('Is soccer my favorite sport?', 'Yes or no...');
 questionTwo = questionTwo.toLowerCase();
+console.log(questionTwo);
 if (questionTwo === 'yes' || questionTwo === 'y') {
   alert ('Yes! There\'s a reason why they call it the beautiful game!');
 } else if (questionTwo === 'no' || questionTwo === 'no') {
@@ -45,6 +48,7 @@ if (questionTwo === 'yes' || questionTwo === 'y') {
 
 var questionThree = prompt ('Do I live in Fremont?', 'Yes or no...');
 questionThree = questionThree.toLowerCase();
+console.log(questionThree);
 if (questionThree === 'yes' || questionThree === 'y') {
   alert ('Yep. Got a nice little one bedroom condo right there in the Center of the Universe.');
 } else if (questionThree === 'no' || questionThree === 'no') {
@@ -55,6 +59,7 @@ if (questionThree === 'yes' || questionThree === 'y') {
 
 var questionFour = prompt ('Do I play a musical instrument?', 'Yes or no...');
 questionFour = questionFour.toLowerCase();
+console.log(questionFour);
 if (questionFour === 'yes' || questionFour === 'y') {
   alert ('I learned how to play guitar in high school and still make noise with it now and again.');
 } else if (questionFour === 'no' || questionFour === 'no') {
@@ -96,12 +101,6 @@ var travelUse = travel.toLowerCase();
 console.log(travelUse);
 if (places.indexOf(travelUse) > -1) {
   alert ('Yes! Great guess!');
-// } else if (travelUse === places.indexOf(1)) {
-//   alert ('Si! Cancun with family. Spring break!');
-// } else if (travelUse === places.indexOf(2)) {
-//   alert ('You betcha, eh! I actually went to the Women\'s World Cup final in Vancouver last year!');
-// } else if (travelUse === places.indexOf(3)) {
-//   alert ('Oh yes! It was beautiful. Paradise on earth!');
 } else {
   alert ('Sorry. You didn\'t guess correctly. Thanks for playing though!');
 };
@@ -133,3 +132,7 @@ hendrix.textContent = answerMessageFour;
 var birthDay = 'You thought I was born in the ' + birthMonth + ' month of ' + birthYear + '.';
 var december = document.getElementById('sag');
 december.textContent = birthDay;
+
+var countries = 'You thought that I have travelled to ' + travel + '.';
+var trips = document.getElementById('countries');
+trips.textContent = countries;
