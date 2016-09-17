@@ -159,5 +159,9 @@ var december = document.getElementById('sag');
 december.textContent = birthDay;
 
 var countries = 'You thought that I have travelled to ' + travel + '.';
-var trips = document.getElementById('countries');
+var trips = document.getElementById('abroad');
 trips.textContent = countries;
+
+var numberGuess = 'It took you ' + counter + ' guesses to get my number, which was ' + myNumber + '.';
+var houdini = document.getElementById('fourIsMyNumber');
+houdini.textContent = numberGuess;
