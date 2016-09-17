@@ -107,12 +107,12 @@ if (places.indexOf(travelUse) > -1) {
 };
 
 var myNumber = 4;
-var counter = 0;
+var counter = 1;
 
 function getUserNumber() {
   var userAnswerSeven = parseInt(prompt('I\'m thinking of a number beween 1 and 10. Can you guess it?'));
   if (userAnswerSeven === myNumber) {
-    if (counter === 0) {
+    if (counter === 1) {
       alert ('Wow! You got it on the first try. You must be a mind reader!');
       return;
     } else {
