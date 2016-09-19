@@ -130,6 +130,30 @@ function getUserNumber() {
 }
 getUserNumber();
 
+// var statesHome = ['pa', 'wa', 'fl', 'mi', 'md'];
+// var guessesGoHere = [];
+// var tries = 1;
+// alert('I\'ve lived in 5 different US states in my life. Can you guess them?');
+//
+// while (tries < 6) {
+//   var getUserStatesGuess = prompt ('Use 2 letter abbr. Washington = WA');
+//   var userStatesGuesses = getUserStatesGuess.toLowerCase();
+//   guessesGoHere.push(userStatesGuesses);
+//   tries++;
+// }
+//
+// console.log(guessesGoHere);
+//
+// var i;
+// var correctGuesses = [];
+//
+// for (i = 0; i < guessesGoHere.length; i++) {
+//   if (statesHome.indexOf(guessesGoHere.indexOf(i)) > -1) {
+//     correctGuesses.push(guessesGoHere);
+//   }
+// }
+// console.log(correctGuesses);
+
 //I used page 79 of the JS text as a reference for these scripts
 var hello = 'Welcome to me, ';
 
