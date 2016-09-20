@@ -98,14 +98,24 @@ var incorrectFeedback = [
   'Wrong. I do play the guitar. Not very well but...',
   'Nope. It is actually one of my least favorite things to do.'
 ];
-var x;
 
-for (x = 0; x < numberOfQuestions; x++) {
+var correctResponses = [];
+var incorrectResponses = [];
+
+for (var x = 0; x < numberOfQuestions; x++) {
   var userResponse = prompt(questions[x]);
-  if (userResponse === answers[x]) {
-    
+  var userResponseLC = userResponse.toLowerCase;
+  if (userResponseLC === answers[x]) {
+    console.log(userResponseLC);
+    alert(correctFeedback[x]);
+    correctResponses.push();
+  } else {
+    alert(incorrectFeedback[x]);
+    incorrectResponses.push();
   }
 }
+
+alert('Thanks for playing! You answered ' + correctResponses.length + ' out of ' + numberOfQuestions + 'questions correctly.');
 
 alert('Bonus round: Can you guess my birth month and year?? Answer in two parts: First enter the month, and then the year.');
 var birthMonth = prompt ('In which month was I born? (Hint: Winter month)', 'mm | January = 01');
