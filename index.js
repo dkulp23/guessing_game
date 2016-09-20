@@ -104,14 +104,14 @@ var incorrectResponses = [];
 
 for (var x = 0; x < numberOfQuestions; x++) {
   var userResponse = prompt(questions[x]);
-  var userResponseLC = userResponse.toLowerCase;
+  var userResponseLC = userResponse.toLowerCase();
   if (userResponseLC === answers[x]) {
     console.log(userResponseLC);
     alert(correctFeedback[x]);
-    correctResponses.push();
+    correctResponses.push(userResponse);
   } else {
     alert(incorrectFeedback[x]);
-    incorrectResponses.push();
+    incorrectResponses.push(userResponse);
   }
 }
 
@@ -170,8 +170,12 @@ function getUserNumber() {
     alert ('Sorry. ' + userAnswerSeven + ' is too low.');
     counter++;
     getUserNumber();
-  } else {
+  } else if (userAnswerSeven > myNumber) {
     alert ('Nice try. ' + userAnswerSeven + ' is too high.');
+    counter++;
+    getUserNumber();
+  } else {
+    alert ('Please enter a number!');
     counter++;
     getUserNumber();
   }
