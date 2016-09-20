@@ -104,14 +104,14 @@ var incorrectResponses = [];
 
 for (var x = 0; x < numberOfQuestions; x++) {
   var userResponse = prompt(questions[x]);
-  var userResponseLC = userResponse.toLowerCase;
+  var userResponseLC = userResponse.toLowerCase();
   if (userResponseLC === answers[x]) {
     console.log(userResponseLC);
     alert(correctFeedback[x]);
-    correctResponses.push();
+    correctResponses.push(userResponse);
   } else {
     alert(incorrectFeedback[x]);
-    incorrectResponses.push();
+    incorrectResponses.push(userResponse);
   }
 }
 
