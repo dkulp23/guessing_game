@@ -170,8 +170,12 @@ function getUserNumber() {
     alert ('Sorry. ' + userAnswerSeven + ' is too low.');
     counter++;
     getUserNumber();
-  } else {
+  } else if (userAnswerSeven > myNumber) {
     alert ('Nice try. ' + userAnswerSeven + ' is too high.');
+    counter++;
+    getUserNumber();
+  } else {
+    alert ('Please enter a number!');
     counter++;
     getUserNumber();
   }
