@@ -111,20 +111,26 @@ var incorrectResponses = [];
 
 var x = 0;
 function yesAndNo(){
-  var userResponse = prompt(questions[x]).toLowerCase();
-  console.log(userResponse);
-  if (userResponse === answers [x] ||userResponse === abbrvAnswers [x]) {
-    alert(correctFeedback [x]);
+  console.log(x);
+  if (x < 5) {
+    var userResponse = prompt(questions[x]).toLowerCase();
+    console.log(userResponse);
+    if (userResponse === answers[x] || userResponse === abbrvAnswers[x]) {
+    alert(correctFeedback[x]);
+    correctResponses.push(userResponse);
     x++;
     yesAndNo();
   }
-    else if (userResponse !== answers [x] ||userResponse !== abbrvAnswers [x]){
-      alert(incorrectFeedback [x]);
+    else if (userResponse !== answers[x] || userResponse !== abbrvAnswers[x]){
+      alert(incorrectFeedback[x]);
+      incorrectResponses.push(userResponse);
       x++;
       yesAndNo();
 
     }
-
+  } else {
+    return;
+  }
 
   }
 
@@ -142,7 +148,7 @@ yesAndNo();
 //   }
 // }
 
-alert('Thanks for playing! You answered ' + correctResponses.length + ' out of ' + numberOfQuestions + 'questions correctly.');
+alert('Thanks for playing! You answered ' + correctResponses.length + ' out of ' + numberOfQuestions + ' questions correctly.');
 
 alert('Bonus round: Can you guess my birth month and year?? Answer in two parts: First enter the month, and then the year.');
 var birthMonth = prompt ('In which month was I born? (Hint: Winter month)', 'mm | January = 01');
