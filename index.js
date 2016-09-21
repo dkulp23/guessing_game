@@ -84,6 +84,13 @@ var answers = [
   'yes',
   'no'
 ];
+var abbrvAnswers = [
+  'y',
+  'y',
+  'y',
+  'y',
+  'n'
+];
 var correctFeedback = [
   'You\'re right! I was born just outside of Philadelphia.',
   'Oh yeah! I still play quite a bit and go to all the Sounders games.',
@@ -106,8 +113,21 @@ var x = 0;
 function yesAndNo(){
   var userResponse = prompt(questions[x]).toLowerCase();
   console.log(userResponse);
+  if (userResponse === answers [x] ||userResponse === abbrvAnswers [x]) {
+    alert(correctFeedback [x]);
+    x++;
+    yesAndNo();
+  }
+    else if (userResponse !== answers [x] ||userResponse !== abbrvAnswers [x]){
+      alert(incorrectFeedback [x]);
+      x++;
+      yesAndNo();
 
-}
+    }
+
+
+  }
+
 yesAndNo();
 // for (var x = 0; x < numberOfQuestions; x++) {
 //   var userResponse = prompt(questions[x]);
