@@ -102,18 +102,25 @@ var incorrectFeedback = [
 var correctResponses = [];
 var incorrectResponses = [];
 
-for (var x = 0; x < numberOfQuestions; x++) {
-  var userResponse = prompt(questions[x]);
-  var userResponseLC = userResponse.toLowerCase();
-  if (userResponseLC === answers[x]) {
-    console.log(userResponseLC);
-    alert(correctFeedback[x]);
-    correctResponses.push(userResponse);
-  } else {
-    alert(incorrectFeedback[x]);
-    incorrectResponses.push(userResponse);
-  }
+var x = 0;
+function yesAndNo(){
+  var userResponse = prompt(questions[x]).toLowerCase();
+  console.log(userResponse);
+
 }
+yesAndNo();
+// for (var x = 0; x < numberOfQuestions; x++) {
+//   var userResponse = prompt(questions[x]);
+//   var userResponseLC = userResponse.toLowerCase();
+//   if (userResponseLC === answers[x]) {
+//     console.log(userResponseLC);
+//     alert(correctFeedback[x]);
+//     correctResponses.push(userResponse);
+//   } else {
+//     alert(incorrectFeedback[x]);
+//     incorrectResponses.push(userResponse);
+//   }
+// }
 
 alert('Thanks for playing! You answered ' + correctResponses.length + ' out of ' + numberOfQuestions + 'questions correctly.');
 
