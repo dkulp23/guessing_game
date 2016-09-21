@@ -84,6 +84,13 @@ var answers = [
   'yes',
   'no'
 ];
+var abbrvAnswers = [
+  'y',
+  'y',
+  'y',
+  'y',
+  'n'
+];
 var correctFeedback = [
   'You\'re right! I was born just outside of Philadelphia.',
   'Oh yeah! I still play quite a bit and go to all the Sounders games.',
@@ -102,20 +109,46 @@ var incorrectFeedback = [
 var correctResponses = [];
 var incorrectResponses = [];
 
-for (var x = 0; x < numberOfQuestions; x++) {
-  var userResponse = prompt(questions[x]);
-  var userResponseLC = userResponse.toLowerCase();
-  if (userResponseLC === answers[x]) {
-    console.log(userResponseLC);
+var x = 0;
+function yesAndNo(){
+  console.log(x);
+  if (x < 5) {
+    var userResponse = prompt(questions[x]).toLowerCase();
+    console.log(userResponse);
+    if (userResponse === answers[x] || userResponse === abbrvAnswers[x]) {
     alert(correctFeedback[x]);
     correctResponses.push(userResponse);
-  } else {
-    alert(incorrectFeedback[x]);
-    incorrectResponses.push(userResponse);
+    x++;
+    yesAndNo();
   }
-}
+    else if (userResponse !== answers[x] || userResponse !== abbrvAnswers[x]){
+      alert(incorrectFeedback[x]);
+      incorrectResponses.push(userResponse);
+      x++;
+      yesAndNo();
 
-alert('Thanks for playing! You answered ' + correctResponses.length + ' out of ' + numberOfQuestions + 'questions correctly.');
+    }
+  } else {
+    return;
+  }
+
+  }
+
+yesAndNo();
+// for (var x = 0; x < numberOfQuestions; x++) {
+//   var userResponse = prompt(questions[x]);
+//   var userResponseLC = userResponse.toLowerCase();
+//   if (userResponseLC === answers[x]) {
+//     console.log(userResponseLC);
+//     alert(correctFeedback[x]);
+//     correctResponses.push(userResponse);
+//   } else {
+//     alert(incorrectFeedback[x]);
+//     incorrectResponses.push(userResponse);
+//   }
+// }
+
+alert('Thanks for playing! You answered ' + correctResponses.length + ' out of ' + numberOfQuestions + ' questions correctly.');
 
 alert('Bonus round: Can you guess my birth month and year?? Answer in two parts: First enter the month, and then the year.');
 var birthMonth = prompt ('In which month was I born? (Hint: Winter month)', 'mm | January = 01');
