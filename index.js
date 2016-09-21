@@ -116,11 +116,11 @@ function yesAndNo(){
     var userResponse = prompt(questions[x]).toLowerCase();
     console.log(userResponse);
     if (userResponse === answers[x] || userResponse === abbrvAnswers[x]) {
-    alert(correctFeedback[x]);
-    correctResponses.push(userResponse);
-    x++;
-    yesAndNo();
-  }
+      alert(correctFeedback[x]);
+      correctResponses.push(userResponse);
+      x++;
+      yesAndNo();
+    }
     else if (userResponse !== answers[x] || userResponse !== abbrvAnswers[x]){
       alert(incorrectFeedback[x]);
       incorrectResponses.push(userResponse);
@@ -132,7 +132,7 @@ function yesAndNo(){
     return;
   }
 
-  }
+}
 
 yesAndNo();
 // for (var x = 0; x < numberOfQuestions; x++) {
