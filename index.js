@@ -5,6 +5,10 @@ function greeting() {
 }
 greeting();
 
+var userName = prompt('Hi! What\'s your name?');
+console.log(userName);
+alert('Welcome to my site, ' + userName + '. I\'d like to play a quick guessing game to help us get acquainted, ' + userName + '. Let\'s see how well you know me!');
+
 var questions = [
   'Was I born in Pennsylvania?',
   'Is soccer my favorite sport?',
@@ -71,51 +75,69 @@ function yesAndNo() {
 }
 
 yesAndNo();
-console.log(responseToQuestions);
 
 alert('Thanks for playing! You answered ' + correctResponses.length + ' out of ' + numberOfQuestions + ' questions correctly.');
 
 alert('Bonus round: Can you guess my birth month and year?? Answer in two parts: First enter the month, and then the year.');
-var birthMonth = prompt ('In which month was I born? (Hint: Winter month)', 'mm | January = 01');
-console.log(birthMonth);
-var birthMonthInt = parseInt(birthMonth);
-var birthYear = prompt ('In which year was I born? (Hint: Even number)', 'yyyy');
-console.log(birthYear);
-var birthYearInt = parseInt(birthYear);
-if (birthMonthInt === 12 && birthYear === '1980') {
-  alert ('You win the grand prize! Did you see my driver\'s license or something?');
-} else if (birthMonthInt === 12 && birthYear !== '1980') {
-  if (birthYearInt >= 1978 && birthYearInt <= 1982) {
-    alert ('So close! You got December right but I was born in 1980');
-  } else if (birthYearInt < 1978) {
-    alert ('You got the month right but how old do you think I am??');
+
+function guessMyBirthYearInt() {
+  var birthMonthInt = parseInt(prompt ('In which month was I born? (Hint: Winter month)', 'mm | January = 01'));
+  var birthYear = prompt ('In which year was I born? (Hint: Even number)', 'yyyy');
+  var birthYearInt = parseInt(birthYear);
+  if (birthMonthInt === 12 && birthYear === '1980') {
+    alert ('You win the grand prize! Did you see my driver\'s license or something?');
+  } else if (birthMonthInt === 12 && birthYear !== '1980') {
+    if (birthYearInt >= 1978 && birthYearInt <= 1982) {
+      alert ('So close! You got December right but I was born in 1980');
+    } else if (birthYearInt < 1978) {
+      alert ('You got the month right but how old do you think I am??');
+    } else {
+      alert('I\'ll take that as a compliment! You got Decmeber right but I was born in 1980.');
+    }
+  } else if (birthMonthInt !== 12 && birthYear === '1980') {
+    if (birthMonthInt <= 2 || birthMonthInt >= 10) {
+      alert ('Close! You got the year right but I was born in December. Yeah Sagitarius!');
+    } else {
+      alert ('Almost! You got the year right but how long do you think the winter is? I was born in December.');
+    }
   } else {
-    alert('I\'ll take that as a compliment! You got Decmeber right but I was born in 1980.');
-  }
-} else if (birthMonthInt !== 12 && birthYear === '1980') {
-  if (birthMonthInt <= 2 || birthMonthInt >= 10) {
-    alert ('Close! You got the year right but I was born in December. Yeah Sagitarius!');
-  } else {
-    alert ('Almost! You got the year right but how long do you think the winter is? I was born in December.');
-  }
-} else {
-  alert ('Thanks for trying but you didn\'t get either right. Just so you know, I was born in December of 1980.');
-};
+    alert ('Sorry! You didn\'t get either right! Try guessing again...');
+    guessMyBirthYearInt();
+  };
+}
+
+guessMyBirthYearInt();
 
 var places = ['iceland', 'mexico', 'canada', 'st martin'];
-var travel = prompt ('Last question: I\'ve only traveled out of the US to 4 other countries. Can you name one?', '1 is Nordic, 2 are neighbors & 1 a Caribbean Island');
-var travelUse = travel.toLowerCase();
-console.log(travelUse);
-if (places.indexOf(travelUse) > -1) {
-  alert ('Yes! Great guess!');
-} else {
-  alert ('Sorry. You didn\'t guess correctly. Thanks for playing though!');
-};
+var yesPlaces = [ ];
+var noPlaces = [ ];
+var q = 0;
 
-var myNumber = 4;
+function guessWhereIveBeen() {
+  if (q < 4) {
+    var travel = prompt ('Next question: I\'ve only traveled out of the US to 4 other countries. Can you name one?', '1 is Nordic, 2 are neighbors & 1 a Caribbean Island');
+    var travelUse = travel.toLowerCase();
+    if (places.indexOf(travelUse) > -1) {
+      alert ('Great guess! Can you get another one??');
+      yesPlaces.push(travel);
+      q++;
+      guessWhereIveBeen();
+    } else {
+      alert ('Nope, haven\'t been there...yet! Guess again.');
+      noPlaces.push(travel);
+      q++;
+      guessWhereIveBeen();
+    }
+  }
+}
+guessWhereIveBeen();
+
+alert('You guessed these countries correctly:\n' + yesPlaces.join('\n'));
+
 var counter = 1;
 
 function getUserNumber() {
+  var myNumber = 4;
   var userAnswerSeven = parseInt(prompt('I\'m thinking of a number beween 1 and 10. Can you guess it?'));
   if (userAnswerSeven === myNumber) {
     if (counter === 1) {
@@ -182,3 +204,38 @@ trips.textContent = countries;
 var numberGuess = 'It took you ' + counter + ' guesses to get my number, which was ' + myNumber + '.';
 var houdini = document.getElementById('fourIsMyNumber');
 houdini.textContent = numberGuess;
+
+// var hello = 'Welcome to me, ';
+//
+// var heyThere = hello + userName + '!';
+//
+// var hi = document.getElementById('welcome');
+// hi.textContent = heyThere;
+//
+// var answerMessageOne = 'You answered ' + questionOne + '.';
+// var pa = document.getElementById('born');
+// pa.textContent = answerMessageOne;
+//
+// var answerMessageTwo = 'You answered ' + questionTwo + '.';
+// var gol = document.getElementById('sport');
+// gol.textContent = answerMessageTwo;
+//
+// var answerMessageThree = 'You answered ' + questionThree + '.';
+// var troll = document.getElementById('live');
+// troll.textContent = answerMessageThree;
+//
+// var answerMessageFour = 'You answered ' + questionFour + '.';
+// var hendrix = document.getElementById('musical');
+// hendrix.textContent = answerMessageFour;
+//
+// var birthDay = 'You thought I was born in the ' + birthMonth + ' month of ' + birthYear + '.';
+// var december = document.getElementById('sag');
+// december.textContent = birthDay;
+//
+// var countries = 'You thought that I have travelled to ' + travel + '.';
+// var trips = document.getElementById('abroad');
+// trips.textContent = countries;
+//
+// var numberGuess = 'It took you ' + counter + ' guesses to get my number, which was ' + myNumber + '.';
+// var houdini = document.getElementById('fourIsMyNumber');
+// houdini.textContent = numberGuess;
