@@ -1,4 +1,10 @@
 'use strict';
+function greeting() {
+  var userName = prompt('Hi! What\'s your name?');
+  alert('Welcome to my site, ' + userName + '. I\'d like to play a quick guessing game to help us get acquainted, ' + userName + '. Let\'s see how well you know me!');
+}
+greeting();
+
 var userName = prompt('Hi! What\'s your name?');
 console.log(userName);
 alert('Welcome to my site, ' + userName + '. I\'d like to play a quick guessing game to help us get acquainted, ' + userName + '. Let\'s see how well you know me!');
@@ -40,24 +46,29 @@ var incorrectFeedback = [
   'Nope. It is actually one of my least favorite things to do.'
 ];
 
+var responseToQuestions = [];
 var correctResponses = [];
 var incorrectResponses = [];
 
 var x = 0;
 function yesAndNo() {
   if (x < 5) {
-    var userResponse = prompt(questions[x]).toLowerCase();
-    console.log(userResponse);
+    var userResponse = prompt(questions[x], 'Please answer yes/no or y/n.').toLowerCase();
     if (userResponse === answers[x] || userResponse === abbrvAnswers[x]) {
       alert(correctFeedback[x]);
+      responseToQuestions.push(userResponse);
       correctResponses.push(userResponse);
       x++;
       yesAndNo();
     }
     else if (userResponse !== answers[x] || userResponse !== abbrvAnswers[x]){
       alert(incorrectFeedback[x]);
+      responseToQuestions.push(userResponse);
       incorrectResponses.push(userResponse);
       x++;
+      yesAndNo();
+    } else {
+      alert('Please answer yes or no!');
       yesAndNo();
     }
   }
@@ -152,6 +163,48 @@ function getUserNumber() {
 getUserNumber();
 
 //I used page 79 of the JS text as a reference for these scripts
+var hello = 'Welcome to me, ';
+
+var heyThere = hello + userName + '!';
+
+var hi = document.getElementById('welcome');
+hi.textContent = heyThere;
+
+var answerMessageOne = 'You answered ' + responseToQuestions[0] + '.';
+var pa = document.getElementById('born');
+pa.textContent = answerMessageOne;
+
+var answerMessageTwo = 'You answered ' + responseToQuestions[1] + '.';
+var gol = document.getElementById('sport');
+gol.textContent = answerMessageTwo;
+
+var answerMessageThree = 'You answered ' + responseToQuestions[2] + '.';
+var troll = document.getElementById('live');
+troll.textContent = answerMessageThree;
+
+var answerMessageFour = 'You answered ' + responseToQuestions[3] + '.';
+var hendrix = document.getElementById('musical');
+hendrix.textContent = answerMessageFour;
+
+var driveMuch = document.getElementById('doIDrive');
+driveMuch.textcontent = questions[0];
+
+var responseToQuestionFive = 'You answered ' + responseToQuestions[4] + '.';
+var armstrong = document.getElementById('iHateDriving');
+armstrong.textContent = responseToQuestionFive;
+
+var birthDay = 'You thought I was born in the ' + birthMonth + ' month of ' + birthYear + '.';
+var december = document.getElementById('sag');
+december.textContent = birthDay;
+
+var countries = 'You thought that I have travelled to ' + travel + '.';
+var trips = document.getElementById('abroad');
+trips.textContent = countries;
+
+var numberGuess = 'It took you ' + counter + ' guesses to get my number, which was ' + myNumber + '.';
+var houdini = document.getElementById('fourIsMyNumber');
+houdini.textContent = numberGuess;
+
 // var hello = 'Welcome to me, ';
 //
 // var heyThere = hello + userName + '!';
