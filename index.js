@@ -165,6 +165,9 @@ function getUserNumber() {
     counter++;
     getUserNumber();
   }
+  var numberGuess = 'It took you ' + counter + ' guesses to get my number, which was ' + myNumber + '.';
+  var houdini = document.getElementById('fourIsMyNumber');
+  houdini.textContent = numberGuess;
 }
 getUserNumber();
 
@@ -207,46 +210,16 @@ function domFive() {
 }
 domFive();
 
+function correctPlaces() {
+  var countries = yesPlaces.join('\n');
+  var trips = document.getElementById('abroad');
+  trips.textContent = countries;
+}
+correctPlaces();
 
-var countries = 'You thought that I have travelled to ' + travel + '.';
-var trips = document.getElementById('abroad');
-trips.textContent = countries;
-
-var numberGuess = 'It took you ' + counter + ' guesses to get my number, which was ' + myNumber + '.';
-var houdini = document.getElementById('fourIsMyNumber');
-houdini.textContent = numberGuess;
-
-// var hello = 'Welcome to me, ';
-//
-// var heyThere = hello + userName + '!';
-//
-// var hi = document.getElementById('welcome');
-// hi.textContent = heyThere;
-//
-// var answerMessageOne = 'You answered ' + questionOne + '.';
-// var pa = document.getElementById('born');
-// pa.textContent = answerMessageOne;
-//
-// var answerMessageTwo = 'You answered ' + questionTwo + '.';
-// var gol = document.getElementById('sport');
-// gol.textContent = answerMessageTwo;
-//
-// var answerMessageThree = 'You answered ' + questionThree + '.';
-// var troll = document.getElementById('live');
-// troll.textContent = answerMessageThree;
-//
-// var answerMessageFour = 'You answered ' + questionFour + '.';
-// var hendrix = document.getElementById('musical');
-// hendrix.textContent = answerMessageFour;
-//
-// var birthDay = 'You thought I was born in the ' + birthMonth + ' month of ' + birthYear + '.';
-// var december = document.getElementById('sag');
-// december.textContent = birthDay;
-//
-// var countries = 'You thought that I have travelled to ' + travel + '.';
-// var trips = document.getElementById('abroad');
-// trips.textContent = countries;
-//
-// var numberGuess = 'It took you ' + counter + ' guesses to get my number, which was ' + myNumber + '.';
-// var houdini = document.getElementById('fourIsMyNumber');
-// houdini.textContent = numberGuess;
+function incorrectPlaces() {
+  var noCountries = noPlaces.join('\n');
+  var futureTrips = document.getElementById('nova');
+  futureTrips.textContent = noCountries;
+}
+incorrectPlaces();
