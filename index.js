@@ -3,8 +3,13 @@
 function greeting() {
   var userName = prompt('Hi! What\'s your name?');
   alert('Welcome to my site, ' + userName + '. I\'d like to play a quick guessing game to help us get acquainted, ' + userName + '. Let\'s see how well you know me!');
-  return userName;
+  var hello = 'Welcome to me, ';
+  var heyThere = hello + userName + '!';
+
+  var hi = document.getElementById('welcome');
+  hi.textContent = heyThere;
 }
+
 greeting();
 
 var questions = [
@@ -161,12 +166,7 @@ function getUserNumber() {
 getUserNumber();
 
 //I used page 79 of the JS text as a reference for these scripts
-var hello = 'Welcome to me, ';
 
-var heyThere = hello + userName + '!';
-
-var hi = document.getElementById('welcome');
-hi.textContent = heyThere;
 
 var answerMessageOne = 'You answered ' + responseToQuestions[0] + '.';
 var pa = document.getElementById('born');
