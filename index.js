@@ -87,6 +87,9 @@ function guessMyBirthYearInt() {
   var birthMonthInt = parseInt(prompt ('In which month was I born? (Hint: Winter month)', 'mm | January = 01'));
   var birthYear = prompt ('In which year was I born? (Hint: Even number)', 'yyyy');
   var birthYearInt = parseInt(birthYear);
+  var birthDay = 'You thought I was born in the ' + birthMonthInt + ' month of ' + birthYear + '.';
+  var december = document.getElementById('sag');
+  december.textContent = birthDay;
   if (birthMonthInt === 12 && birthYear === '1980') {
     alert ('You win the grand prize! Did you see my driver\'s license or something?');
   } else if (birthMonthInt === 12 && birthYear !== '1980') {
@@ -106,7 +109,7 @@ function guessMyBirthYearInt() {
   } else {
     alert ('Sorry! You didn\'t get either right! Try guessing again...');
     guessMyBirthYearInt();
-  };
+  }
 }
 
 guessMyBirthYearInt();
@@ -167,33 +170,45 @@ getUserNumber();
 
 //I used page 79 of the JS text as a reference for these scripts
 
+function domOne() {
+  var answerMessageOne = 'You answered ' + responseToQuestions[0] + '.';
+  var pa = document.getElementById('born');
+  pa.textContent = answerMessageOne;
+}
+domOne();
 
-var answerMessageOne = 'You answered ' + responseToQuestions[0] + '.';
-var pa = document.getElementById('born');
-pa.textContent = answerMessageOne;
+function domTwo() {
+  var answerMessageTwo = 'You answered ' + responseToQuestions[1] + '.';
+  var gol = document.getElementById('sport');
+  gol.textContent = answerMessageTwo;
+}
+domTwo();
 
-var answerMessageTwo = 'You answered ' + responseToQuestions[1] + '.';
-var gol = document.getElementById('sport');
-gol.textContent = answerMessageTwo;
+function domThree() {
+  var answerMessageThree = 'You answered ' + responseToQuestions[2] + '.';
+  var troll = document.getElementById('live');
+  troll.textContent = answerMessageThree;
+}
+domThree();
 
-var answerMessageThree = 'You answered ' + responseToQuestions[2] + '.';
-var troll = document.getElementById('live');
-troll.textContent = answerMessageThree;
+function domFour() {
+  var answerMessageFour = 'You answered ' + responseToQuestions[3] + '.';
+  var hendrix = document.getElementById('musical');
+  hendrix.textContent = answerMessageFour;
+}
+domFour();
 
-var answerMessageFour = 'You answered ' + responseToQuestions[3] + '.';
-var hendrix = document.getElementById('musical');
-hendrix.textContent = answerMessageFour;
+function domFive() {
+  var questionFive = questions[4];
+  var driveMuch = document.getElementById('doIDrive');
+  driveMuch.textcontent = questionFive;
 
-var driveMuch = document.getElementById('doIDrive');
-driveMuch.textcontent = questions[0];
+  var responseToQuestionFive = 'You answered ' + responseToQuestions[4] + '.';
+  var armstrong = document.getElementById('iHateDriving');
+  armstrong.textContent = responseToQuestionFive;
+}
+domFive();
 
-var responseToQuestionFive = 'You answered ' + responseToQuestions[4] + '.';
-var armstrong = document.getElementById('iHateDriving');
-armstrong.textContent = responseToQuestionFive;
-
-var birthDay = 'You thought I was born in the ' + birthMonth + ' month of ' + birthYear + '.';
-var december = document.getElementById('sag');
-december.textContent = birthDay;
 
 var countries = 'You thought that I have travelled to ' + travel + '.';
 var trips = document.getElementById('abroad');
