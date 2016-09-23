@@ -168,8 +168,6 @@ function getUserNumber() {
 }
 getUserNumber();
 
-//I used page 79 of the JS text as a reference for these scripts
-
 function domOne() {
   var answerMessageOne = 'You answered ' + responseToQuestions[0] + '.';
   var pa = document.getElementById('born');
