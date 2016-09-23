@@ -1,13 +1,11 @@
 'use strict';
+
 function greeting() {
   var userName = prompt('Hi! What\'s your name?');
   alert('Welcome to my site, ' + userName + '. I\'d like to play a quick guessing game to help us get acquainted, ' + userName + '. Let\'s see how well you know me!');
+  return userName;
 }
 greeting();
-
-var userName = prompt('Hi! What\'s your name?');
-console.log(userName);
-alert('Welcome to my site, ' + userName + '. I\'d like to play a quick guessing game to help us get acquainted, ' + userName + '. Let\'s see how well you know me!');
 
 var questions = [
   'Was I born in Pennsylvania?',
