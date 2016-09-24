@@ -58,7 +58,6 @@ article {
 
 footer {
   background-color: #505F90;
-  position: relative;
 }
 
 article h3 {
@@ -84,12 +83,10 @@ article ol {
 
 .email {
   text-align: center;
-  /*background-color: inherit;*/
 }
 
 .phone {
   text-align: center;
-  /*background-color: inherit;*/
 }
 
 #welcome {
@@ -98,7 +95,9 @@ article ol {
 }
 
 #contact {
-  display: inline;
   background-color: #505F90;
-  position: relative;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  overflow: auto;
+  width: 100%;
 }
