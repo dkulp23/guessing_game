@@ -5,6 +5,9 @@ body {
 header {
   background: #01505F;
   padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  margin-bottom: 3px;
 }
 
 img {
@@ -46,6 +49,8 @@ article {
   height: 200px;
   overflow: scroll;
   float: left;
+  border: 2px dotted #000000;
+  border-radius: 5px;
   margin: 10px;
   padding: 3px;
   background-color: #4F2707;
@@ -53,33 +58,38 @@ article {
 
 footer {
   background-color: #505F90;
+  position: relative;
 }
 
-/*article h3 {
-  padding: 5px;
+article h3 {
+  text-align: center;
 }
 
 article p {
-  padding: 5px;
+  text-align: center;;
 }
 
 article ol {
-  padding: 5px;
-}*/
+  text-align: center;
+}
 
 .main {
   background-color: #76451E;
   color: #DFB593;
+  border: 2px solid #000000;
+  border-radius: 5px;
   overflow: auto;
   width: 100%;
 }
 
 .email {
   text-align: center;
+  /*background-color: inherit;*/
 }
 
 .phone {
   text-align: center;
+  /*background-color: inherit;*/
 }
 
 #welcome {
@@ -89,4 +99,6 @@ article ol {
 
 #contact {
   display: inline;
+  background-color: #505F90;
+  position: relative;
 }
