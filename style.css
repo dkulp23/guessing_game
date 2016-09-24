@@ -58,6 +58,11 @@ article {
 
 footer {
   background-color: #505F90;
+  border: 2px solid #000000;
+  margin-top: 3px;
+  border-radius: 5px;
+  overflow: auto;
+  width: 100%;
 }
 
 article h3 {
@@ -92,12 +97,4 @@ article ol {
 #welcome {
   text-align: center;
   color: #6A959D;
-}
-
-#contact {
-  background-color: #505F90;
-  border: 2px solid #000000;
-  border-radius: 5px;
-  overflow: auto;
-  width: 100%;
 }
